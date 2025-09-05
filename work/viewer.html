@@ -1,29 +1,76 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Document Viewer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b1020;--ink:#e6e9f2;--muted:#9aa5b1;--bar:#0f162a;--line:#1d2640}
-*{box-sizing:border-box}
-body{margin:0;background:#0b1020;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
-.bar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--bar);position:sticky;top:0}
-.btn{background:#1e293b;color:var(--ink);border:1px solid #334155;border-radius:10px;padding:8px 12px;text-decoration:none;margin-left:8px}
-.frame{width:100%;height:calc(100vh - 56px);border:0}
-</style></head>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Viewer</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <style>
+    .viewer{height:80vh;width:100%;border:1px solid var(--pill-border);border-radius:12px;background:#111}
+    .bar{display:flex;gap:8px;align-items:center;justify-content:space-between;margin:12px 0}
+    .bar .left{display:flex;gap:8px;align-items:center}
+    .bar input{width:420px;max-width:60vw;background:var(--pill);border:1px solid var(--pill-border);color:var(--fg);padding:8px;border-radius:8px}
+  </style>
+</head>
 <body>
-<div class="bar"><div id="docTitle">Document Viewer</div>
-<div><a class="btn" href="../index.html">← Back</a><a id="downloadLink" class="btn" href="#">Download</a></div></div>
-<iframe id="viewer" class="frame" src=""></iframe>
-<script>
-function getParam(n){const u=new URL(window.location.href);return u.searchParams.get(n);}
-const file=getParam('file'); const title=getParam('title')||'Document Viewer';
-document.getElementById('docTitle').textContent=title;
-let rel=file||''; if(rel.startsWith('./')) rel=rel.slice(2); if(rel.startsWith('/')) rel=rel.slice(1);
-const href='/' + rel; document.getElementById('downloadLink').href=href;
-const low=href.toLowerCase(); let src='';
-if(low.endsWith('.pdf')) src=href;
-else if(low.endsWith('.doc')||low.endsWith('.docx')||low.endsWith('.ppt')||low.endsWith('.pptx')){const abs=window.location.origin+href; const enc=encodeURIComponent(abs); src='https://view.officeapps.live.com/op/embed.aspx?src='+enc;}
-else {const abs=window.location.origin+href; const enc=encodeURIComponent(abs); src='https://docs.google.com/gview?embedded=1&url='+enc;}
-document.getElementById('viewer').src=src;
-</script>
-</body></html>
+  <div class="page">
+    <div class="hero">
+      <h1>Document Viewer</h1>
+      <p>Pass <code>?file=</code> to load a PDF. Example: <code>/work/viewer.html?file=assets/RangaPrasad-Sep%2025.pdf</code></p>
+    </div>
+
+    <div class="section">
+      <div class="bar">
+        <div class="left">
+          <span class="badge">PDF URL</span>
+          <input id="fileInput" placeholder="assets/RangaPrasad-Sep 25.pdf" />
+          <a id="openBtn" class="btn" href="#">Open</a>
+        </div>
+        <div class="btns">
+          <a id="dlBtn" class="btn" href="#" download>Download</a>
+          <a id="rawBtn" class="btn" href="#" target="_blank" rel="noopener">Open Raw</a>
+        </div>
+      </div>
+      <iframe id="viewer" class="viewer" src="" title="PDF"></iframe>
+    </div>
+
+    <div class="section">
+      <h2>Shortcuts</h2>
+      <div class="grid">
+        <a class="card" href="/work/viewer.html?file=assets/RangaPrasad-Sep%2025.pdf">
+          <h3>Resume</h3><div class="meta">assets/RangaPrasad-Sep 25.pdf</div>
+        </a>
+        <a class="card" href="/work/viewer.html?file=assets/RangaPrasad_Portfolio_Deck_Exec.pdf">
+          <h3>Portfolio Deck</h3><div class="meta">assets/RangaPrasad_Portfolio_Deck_Exec.pdf</div>
+        </a>
+      </div>
+    </div>
+
+    <footer>Viewer • Uses native PDF rendering in the browser.</footer>
+  </div>
+
+  <script>
+    function getParam(name){
+      const u = new URL(window.location.href);
+      return u.searchParams.get(name);
+    }
+    function setViewer(file){
+      if(!file) return;
+      const enc = file.replace(/ /g, '%20');
+      document.getElementById('viewer').src = enc;
+      document.getElementById('dlBtn').href = enc;
+      document.getElementById('rawBtn').href = enc;
+      document.getElementById('fileInput').value = file;
+    }
+    const initFile = getParam('file');
+    if(initFile){ setViewer(initFile); }
+
+    document.getElementById('openBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const val = document.getElementById('fileInput').value.trim();
+      if(val){ setViewer(val); const u = new URL(window.location.href); u.searchParams.set('file', val); history.replaceState(null,'',u.toString());}
+    });
+  </script>
+</body>
+</html>

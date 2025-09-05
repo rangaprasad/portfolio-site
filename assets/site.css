@@ -1,0 +1,45 @@
+
+/* Minimal, clean CSS for nav + utility classes */
+:root{
+  --bg:#0b0f19;
+  --fg:#e6e9f0;
+  --muted:#9aa4af;
+  --accent:#6ea8fe;
+  --pill:#131a2a;
+  --pill-border:#1f2740;
+  --card:#0f1629;
+  --link:#99c1ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav-wrap{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(1.2) blur(6px);background:rgba(11,15,25,0.7);border-bottom:1px solid var(--pill-border)}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 16px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.3px;margin-right:auto}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--pill-border);border-radius:999px;background:var(--pill);font-size:14px;line-height:1}
+.pill:hover{border-color:var(--accent);box-shadow:0 0 0 2px rgba(110,168,254,0.15);text-decoration:none}
+.pill small{color:var(--muted);font-size:12px}
+
+.page{max-width:1100px;margin:24px auto;padding:0 16px}
+.hero{display:grid;gap:8px;margin:28px 0}
+.hero h1{font-size:28px;margin:0}
+.hero p{margin:0;color:var(--muted)}
+
+.section{background:var(--card);border:1px solid var(--pill-border);border-radius:16px;padding:16px;margin:16px 0}
+.section h2{font-size:18px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+
+.card{background:var(--pill);border:1px solid var(--pill-border);border-radius:14px;padding:12px}
+.card h3{margin:0 0 6px;font-size:16px}
+.meta{color:var(--muted);font-size:13px}
+
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--pill-border);background:var(--pill);}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:999px;border:1px solid var(--pill-border);background:var(--card);font-size:12px;color:var(--muted)}
+.list{margin:8px 0 0 16px}
+footer{opacity:.8;margin:32px 0 24px;font-size:13px;text-align:center;color:var(--muted)}
+hr{border:none;border-top:1px solid var(--pill-border);margin:16px 0}
