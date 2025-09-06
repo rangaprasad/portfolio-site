@@ -1,101 +1,102 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ranga Prasad — Executive Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b1020;--card:#0f162a;--ink:#e6e9f2;--muted:#9aa5b1;--line:#1d2640;--accent:#6ee7ff;--accent2:#93c5fd}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 800px at 10% -10%,#111b35,transparent),linear-gradient(#0b1020,#0b1020);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:48px 24px}
-.header{display:flex;justify-content:space-between;gap:16px;align-items:center}
-.brand{font-weight:700;letter-spacing:.4px}
-.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04111f;padding:10px 14px;border-radius:12px;font-weight:700}
-.hero{padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:24px}
-.title{font-size:40px;margin:6px 0}
-.sub{color:var(--muted);max-width:860px}
-.section{margin:28px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-.card h3{margin:0 0 8px 0;font-size:18px}
-.kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.22em}
-.small{font-size:13px;color:var(--muted)}
-.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#0d1428;color:var(--muted);font-size:12px;margin-right:6px}
-.nav{display:flex;gap:10px;flex-wrap:wrap}
-</style></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work & Case Studies - Ranga Prasad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
 <body>
-<div class="container">
-  <div class="header">
-    <div class="brand">Ranga Prasad</div>
-    <div class="nav">
-      <a class="btn" href="/work/viewer.html?file=assets/RangaPrasad-Sep%2025.pdf&title=Resume">Resume (view PDF)</a>
-      <a class="btn" href="assets/RangaPrasad-Sep 25.pdf">Resume (download)</a>
-      <a class="btn" href="/work/viewer.html?file=assets/RangaPrasad_Portfolio_Deck_Exec.pptx&title=Portfolio%20Deck">Deck (view)</a>
-      <a class="btn" href="assets/RangaPrasad_Portfolio_Deck_Exec.pdf">Deck (PDF)</a>
-      <a class="btn" href="https://github.com/rangaprasad?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+  <div class="wrap">
+    <header class="tone-washed">
+      <a href="/">← Back to Portfolio Hub</a>
+      <h1>Work & Case Studies</h1>
+      <p class="lede"><strong>Curated portfolio.</strong> Problem → Solution → Tech stack → Outcome. Each card opens the full PDF.</p>
+      <div class="bar">
+        <a href="/assets/RangaPrasad-Sep%2025.pdf" target="_blank" rel="noopener">Resume (PDF)</a> ·
+        <a href="mailto:ranga.rangarajan@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <section class="grid engg wash-first-2" aria-label="Case studies">
+      <div class="card">
+        <div>
+          <h3>Spanda.AI GTM Framework</h3>
+          <div class="meta">Domain: GTM & Platform · Type: Enterprise adoption playbook</div>
+          <div class="block"><strong>Problem:</strong> AI platform struggled to communicate value by persona and industry; adoption stalled.</div>
+          <div class="block"><strong>Solution:</strong> Six-layer GTM narrative with persona-mapped value props, lighthouse plays, and repeatable enterprise motions.</div>
+          <div class="block"><strong>Tech stack:</strong> Platform capabilities mapped to use-cases (RAG, LLMOps, analytics); demo narratives.</div>
+          <div class="block"><strong>Outcome:</strong> Clear sales enablement; accelerated enterprise conversations and proof points.</div>
+        </div>
+        <div class="cta" style="margin-top:12px">
+          <a href="/assets/proposals/spanda-gtm.pdf" target="_blank" rel="noopener">Open Case (PDF)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Genesis — Offshore Hub</h3>
+          <div class="meta">Domain: Platform & Org Design · Type: 0→1 vision</div>
+          <div class="block"><strong>Problem:</strong> Need to build a Chennai engineering hub to deliver AI/FinTech platforms with reliable cadence.</div>
+          <div class="block"><strong>Solution:</strong> Phased team build-out, platform architecture, and delivery rituals (SLOs, roadmaps, reviews).</div>
+          <div class="block"><strong>Tech stack:</strong> Cloud-native microservices (Kubernetes, CI/CD), data/streaming backbone.</div>
+          <div class="block"><strong>Outcome:</strong> Executable plan for hiring, platform enablement, and stakeholder alignment.</div>
+        </div>
+        <div class="cta" style="margin-top:12px">
+          <a href="/assets/proposals/genesis.pdf" target="_blank" rel="noopener">Open Case (PDF)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>LIBA / BITS (EdTech)</h3>
+          <div class="meta">Domain: EdTech · Type: AI CoE + pilots</div>
+          <div class="block"><strong>Problem:</strong> Institutions needed trustworthy AI for instructor evaluation, question generation, and thesis review.</div>
+          <div class="block"><strong>Solution:</strong> Designed CoE + pilots with assessment pipelines, RAG-based QA, and academic guardrails.</div>
+          <div class="block"><strong>Tech stack:</strong> RAG, embeddings, evaluation harnesses; dashboards for faculty oversight.</div>
+          <div class="block"><strong>Outcome:</strong> Validated AI assistance for educators; roadmap for controlled rollout.</div>
+        </div>
+        <div class="cta" style="margin-top:12px">
+          <a href="/assets/proposals/liba.pdf" target="_blank" rel="noopener">Open Case (PDF)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>RESPECTFUL AI</h3>
+          <div class="meta">Domain: Governance · Type: Lifecycle framework</div>
+          <div class="block"><strong>Problem:</strong> Enterprises lacked a pragmatic framework to govern AI systems across the lifecycle.</div>
+          <div class="block"><strong>Solution:</strong> RESPECTFUL framework covering risk, safety, evaluation, privacy, and post-deployment monitoring.</div>
+          <div class="block"><strong>Tech stack:</strong> Policy + technical controls (evals, guardrails, observability) mapped to SDLC gates.</div>
+          <div class="block"><strong>Outcome:</strong> Clear governance model enabling compliant, safe AI adoption at pace.</div>
+        </div>
+        <div class="cta" style="margin-top:12px">
+          <a href="/assets/proposals/respectful-ai.pdf" target="_blank" rel="noopener">Open Case (PDF)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>TVS Group (Manufacturing)</h3>
+          <div class="meta">Domain: Industrial AI · Type: Roadmap & CoE</div>
+          <div class="block"><strong>Problem:</strong> Need a practical roadmap for predictive maintenance, assistants, and analytics in manufacturing.</div>
+          <div class="block"><strong>Solution:</strong> Factory AI roadmap with pilots (predictive maintenance, market/HR assistants) and operating model.</div>
+          <div class="block"><strong>Tech stack:</strong> Sensor ETL, ML workflows, retrieval-augmented assistants, BI pipelines.</div>
+          <div class="block"><strong>Outcome:</strong> Sequenced program enabling measurable wins and organizational learning.</div>
+        </div>
+        <div class="cta" style="margin-top:12px">
+          <a href="/assets/proposals/tvs.pdf" target="_blank" rel="noopener">Open Case (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <h4>See also</h4>
+      <a href="/demos">Live Demos</a>
+      <a href="/repos">Code Repos</a>
     </div>
   </div>
-  <section class="hero">
-    <div class="kicker">Executive Portfolio</div>
-    <h1 class="title">GTM strategy & AI platform work</h1>
-    <p class="sub">Curated, PDF-first. One artifact per proposal with DOCX fallback for completeness.</p>
-  </section>
-  <section class="section">
-    <div class="kicker">Strategy & Proposals</div>
-    <h2 style="margin:6px 0 12px 0">Selected work</h2>
-    <div class="grid">
-      
-    <div class="card">
-      <span class="badge">Proposal</span>
-      <h3><a href="work/spanda-gtm.html">Spanda.AI GTM Framework</a></h3>
-      <p class="small">Six-layer GTM narrative; persona-mapped value props; repeatable enterprise adoption plays.</p>
-      <div class="small" style="margin-top:6px">
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Spanda_AI_GTM.pdf&title=Spanda.AI%20GTM%20Framework%20%28PDF%29">View PDF</a>
-        <a class="btn" href="assets/proposals/Spanda_AI_GTM.pdf" download>Download PDF</a>
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Spanda.AI%20GTM%20Whitepaper.docx&title=Spanda.AI%20GTM%20Framework%20%28DOCX%29">DOCX (fallback)</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="badge">Proposal</span>
-      <h3><a href="work/genesis.html">Genesis — Offshore Hub</a></h3>
-      <p class="small">0→1 vision for building the Chennai engineering hub; phased team plan and scenarios.</p>
-      <div class="small" style="margin-top:6px">
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Genesis_Offshore_Hub.pdf&title=Genesis%20%E2%80%94%20Offshore%20Hub%20%28PDF%29">View PDF</a>
-        <a class="btn" href="assets/proposals/Genesis_Offshore_Hub.pdf" download>Download PDF</a>
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Genesis%20Proposal%20-%20V1.docx&title=Genesis%20%E2%80%94%20Offshore%20Hub%20%28DOCX%29">DOCX (fallback)</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="badge">Proposal</span>
-      <h3><a href="work/liba-bits.html">LIBA / BITS (EdTech)</a></h3>
-      <p class="small">AI CoE + pilots for instructor evaluation, question assessment, and thesis review.</p>
-      <div class="small" style="margin-top:6px">
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/LIBA_AI_Transformation.pdf&title=LIBA%20/%20BITS%20%28EdTech%29%20%28PDF%29">View PDF</a>
-        <a class="btn" href="assets/proposals/LIBA_AI_Transformation.pdf" download>Download PDF</a>
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/BITS-P%20SOW-05%20Phase%202%20Support_v1.docx&title=LIBA%20/%20BITS%20%28EdTech%29%20%28DOCX%29">DOCX (fallback)</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="badge">Proposal</span>
-      <h3><a href="work/tvs.html">TVS Group (Manufacturing)</a></h3>
-      <p class="small">Roadmap and CoE for manufacturing; predictive maintenance, market assistant, HR assistant.</p>
-      <div class="small" style="margin-top:6px">
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/TVS_AI_Roadmap.pdf&title=TVS%20Group%20%28Manufacturing%29%20%28PDF%29">View PDF</a>
-        <a class="btn" href="assets/proposals/TVS_AI_Roadmap.pdf" download>Download PDF</a>
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Proposal%20for%20TVS%20Group.docx&title=TVS%20Group%20%28Manufacturing%29%20%28DOCX%29">DOCX (fallback)</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="badge">Proposal</span>
-      <h3><a href="work/respectful-ai.html">RESPECTFUL AI</a></h3>
-      <p class="small">Governance framework (RESPECTFUL) for trustworthy AI across lifecycle.</p>
-      <div class="small" style="margin-top:6px">
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/Respectful_AI.pdf&title=RESPECTFUL%20AI%20%28PDF%29">View PDF</a>
-        <a class="btn" href="assets/proposals/Respectful_AI.pdf" download>Download PDF</a>
-        <a class="btn" href="/work/viewer.html?file=assets/proposals/RESPECTFUL%20AI%20-%20Draft%20-%20v2.docx&title=RESPECTFUL%20AI%20%28DOCX%29">DOCX (fallback)</a>
-      </div>
-    </div>
-    </div>
-  </section>
-</div>
-</body></html>
+</body>
+</html>
+

@@ -1,12 +1,32 @@
-# Shortlinks & friendly URLs (200 rewrites)
+# Hybrid redirects (preserve handcrafted pages; keep only essential shortlinks)
 /resume         /assets/RangaPrasad-Sep%2025.pdf     200
 /deck           /assets/RangaPrasad_Portfolio_Deck_Exec.pdf   200
-/spanda-gtm     /work/viewer.html?file=assets/proposals/spanda-gtm.pdf   200
-/genesis        /work/viewer.html?file=assets/proposals/genesis.pdf      200
-/liba           /work/viewer.html?file=assets/proposals/liba.pdf         200
-/tvs            /work/viewer.html?file=assets/proposals/tvs.pdf          200
-/respectful-ai  /work/viewer.html?file=assets/proposals/respectful-ai.pdf 200
 
 # Role landers
 /roles/aws-engg     /roles/aws-engg/index.html   200
 /roles/stripe-gtm   /roles/stripe-gtm/index.html 200
+
+# Legacy work pages → unified portfolio page
+/work/*                          /portfolio_site_pdf_only/   301
+/portfolio_site_pdf_only/work/*  /portfolio_site_pdf_only/   301
+
+Old GTM landing (if someone bookmarked it) → Product track
+/gtm/*                           /product/                   301
+
+# domain landers
+/              			/index.html     	    200
+/work/*        			/portfolio_site_pdf_only/   301
+/portfolio_site_pdf_only/work/* /portfolio_site_pdf_only/   301
+/engg          			/engg/             	    301
+/edtech-engg   			/edtech-engg/               301
+/fintech-gtm   			/fintech-gtm/               301
+/product       			/product/                   301
+/consulting    			/consulting/                301
+/demos         			/demos/                     301
+/repos         			/repos/                     301
+
+# Convenience aliases
+/demos                           /demos/                     301
+/repos                           /repos/                     301
+
+

@@ -1,155 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ranga Prasad — Executive Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b1020; --card:#0f162a; --ink:#e6e9f2; --muted:#9aa5b1;
-      --line:#1d2640; --accent:#6ee7ff; --accent2:#93c5fd;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica Neue,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% -10%,#111b35,transparent),linear-gradient(#0b1020,#0b1020);color:var(--ink)}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:48px 24px}
-    .header{display:flex;justify-content:space-between;gap:16px;align-items:center}
-    .brand{font-weight:700;letter-spacing:.4px}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#04111f;padding:10px 14px;border-radius:12px;font-weight:700}
-    .hero{padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:24px}
-    .title{font-size:40px;margin:6px 0}
-    .sub{color:var(--muted);max-width:860px}
-    .section{margin:28px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-    .card h3{margin:0 0 6px 0;font-size:18px}
-    .kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.22em}
-    .small{font-size:13px;color:var(--muted)}
-    .list{margin:8px 0 0 18px;color:var(--muted)}
-    .footer{padding:18px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;margin-top:32px}
-    .badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#0d1428;color:var(--muted);font-size:12px;margin-right:6px}
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
-  </style>
-  <link rel="canonical" href="https://portfolio.rangaprasad.work/" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech</title>
+  <meta name="description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech" />
+  <meta property="og:description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
+  <meta property="og:image" content="/assets/og-card.png" />
+  <meta property="og:url" content="/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech" />
+  <meta name="twitter:description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
+  <meta name="twitter:image" content="/assets/og-card.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <script>
+    // Deep-link router: only redirects when ?role=... is explicitly present.
+    (function () {
+      const role = (new URLSearchParams(location.search).get('role') || '').toLowerCase();
+      if (!role) return; // <- prevents any “landing in X” surprises
+      const map = {
+        engg: '/engg', engineering: '/engg', platform: '/engg',
+        ai: '/edtech-engg', genai: '/edtech-engg', llm: '/edtech-engg', rag: '/edtech-engg',
+        payments: '/fintech-gtm', fintech: '/fintech-gtm',
+        product: '/product', innovation: '/product',
+        consulting: '/consulting', advisory: '/consulting',
+        demos: '/demos', repos: '/repos',
+        work: '/portfolio_site_pdf_only', cases: '/portfolio_site_pdf_only'
+      };
+      if (map[role]) location.replace(map[role]);
+    })();
+  </script>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="brand">Ranga Prasad</div>
-      <div class="nav">
-      <a class="btn" href="/work/viewer.html?file=assets/RangaPrasad_Portfolio_Deck_Exec.pdf&title=Portfolio%20Deck">Deck (view PDF)</a>
-      <a class="btn" href="assets/RangaPrasad_Portfolio_Deck_Exec.pdf" download>Deck (download PDF)</a>
-      <a class="btn" href="/work/viewer.html?file=assets/RangaPrasad-Sep 25.pdf&title=Resume">Resume (view PDF)</a>
-      <a class="btn" href="assets/RangaPrasad-Sep 25.pdf" download>Resume (download PDF)</a>
-      <a class="btn" href="https://github.com/rangaprasad?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+  <div class="wrap">
+    <header class="tone-washed">
+      <span class="tag">Portfolio Hub</span>
+      <h1>
+        <span class="name">Ranga Prasad</span><br />
+        <span class="title">Engineering Leadership · AI/GenAI Platforms · FinTech/Payments · Product · Consulting</span>
+      </h1>
+      <p class="lede"><strong>I lead engineering organizations and build platforms that scale.</strong> My portfolio spans
+        <em>cloud-native transformations, applied AI/ML systems, FinTech/payment architectures, product innovation, and consulting advisory</em>.
+      </p>
+      <div class="bar">
+        <a href="/assets/RangaPrasad-Sep%2025.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <span class="sep">•</span>
+        <a href="mailto:ranga.rangarajan@gmail.com">Contact</a>
       </div>
-    </div>
+    </header>
 
-    <section class="hero">
-      <div class="kicker">Executive Portfolio</div>
-      <h1 class="title">GTM strategy & AI platform work</h1>
-      <p class="sub">14+ years leading platform programs across PayPal, Pine Labs, Amazon, and Spanda. I translate advanced AI capabilities into customer value, revenue, and multi‑year partnerships.</p>
+    <!-- Direct paths keep navigation simple; the deep-link router is still available for external URLs -->
+    <section class="grid wash-all" aria-label="Role tracks">
+      <a class="card" href="/engg">
+        <h3>Engineering + Platform</h3>
+        <p>Replatform monolith → microservices, 25× throughput, SRE maturity, reliability, org scaling.</p>
+        <div><span class="chip">Kubernetes</span><span class="chip">Kafka</span><span class="chip">AWS/GCP</span></div>
+      </a>
+
+      <a class="card" href="/edtech-engg">
+        <h3>AI + Scale-ups</h3>
+        <p>LLMOps, RAG, multi-tenant inference, observability, eval harnesses.</p>
+        <div><span class="chip">RAG</span><span class="chip">LLMOps</span><span class="chip">FastAPI</span></div>
+      </a>
+
+      <a class="card" href="/fintech-gtm">
+        <h3>FinTech + Payments</h3>
+        <p>Gateways, payouts, risk, reconciliation, settlement, analytics at scale.</p>
+        <div><span class="chip">Payments</span><span class="chip">Risk</span><span class="chip">Analytics</span></div>
+      </a>
+
+      <a class="card" href="/product">
+        <h3>Product + Innovation</h3>
+        <p>0→1 delivery, MVPs, narrative demos, stakeholder alignment.</p>
+        <div><span class="chip">MVPs</span><span class="chip">Strategy</span></div>
+      </a>
+
+      <a class="card" href="/consulting">
+        <h3>Consulting + Advisory</h3>
+        <p>Fractional VP Eng roles, audits, roadmaps, leadership coaching.</p>
+        <div><span class="chip">Advisory</span><span class="chip">Roadmaps</span></div>
+      </a>
+
+      <a class="card" href="/portfolio_site_pdf_only/">
+        <h3>Work &amp; Case Studies</h3>
+        <p>Curated cases (PDFs): Problem → Solution → Stack → Outcome.</p>
+        <div><span class="chip">Case Studies</span></div>
+      </a>
     </section>
-
-    <section class="section">
-      <div class="kicker">Strategy & Proposals</div>
-      <h2 style="margin:6px 0 12px 0">Selected work</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge">Proposal</span>
-          <h3><a href="work/spanda-gtm.html">Spanda.AI GTM Framework</a></h3>
-          <p class="small">Persona‑mapped value props; cloud/hybrid/embedded adoption models.</p>
-          <ul class="list">
-            <li>Outcome: repeatable GTM playbook; pilots (BITS)</li>
-            <li>Role: authored & presented to C‑suite</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="badge">Proposal</span>
-          <h3><a href="work/genesis.html">Genesis — 0→1 platform vision</a></h3>
-          <p class="small">Foundational AI platform with reusable pipelines across domains.</p>
-          <ul class="list">
-            <li>Outcome: anchor narrative for roadmap; partner dialogs (Quadratyx, TVS)</li>
-            <li>Role: lead author & strategist</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="badge">Proposal</span>
-          <h3><a href="work/liba-bits.html">LIBA / BITS (EdTech)</a></h3>
-          <p class="small">LLM grading, question generation, learning analytics.</p>
-          <ul class="list">
-            <li>Outcome: exec buy‑in; blueprint for deployments</li>
-            <li>Role: proposal + stakeholder engagement</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="badge">Proposal</span>
-          <h3><a href="work/tvs.html">TVS Group (Manufacturing)</a></h3>
-          <p class="small">Predictive maintenance, LLM tutors, supply‑chain analytics with costed variants.</p>
-          <ul class="list">
-            <li>Outcome: AI as lever for operational efficiency</li>
-            <li>Role: crafted ROI‑oriented options</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="badge">Proposal</span>
-          <h3><a href="work/respectful-ai.html">RESPECTFUL AI</a></h3>
-          <p class="small">Responsible, Explainable, Secure, Privacy‑preserving, Trustworthy AI practices.</p>
-          <ul class="list">
-            <li>Outcome: trust & compliance posture in CXO talks</li>
-            <li>Role: principal author</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="kicker">PoC & Code</div>
-      <h2 style="margin:6px 0 12px 0">Selected repos</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/spanda-platform-backend" target="_blank" rel="noopener">spanda-platform-backend</a></h3>
-          <p class="small">Python/FastAPI services for RAG pipelines and inference.</p>
-        </div>
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/spanda-pipeline" target="_blank" rel="noopener">spanda-pipeline</a></h3>
-          <p class="small">Data ETL + embeddings + vector search (Weaviate/Pinecone).</p>
-        </div>
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/spanda-platform-frontend" target="_blank" rel="noopener">spanda-platform-frontend</a></h3>
-          <p class="small">Chat UI + dashboards for enterprise LLM apps.</p>
-        </div>
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/payment-system" target="_blank" rel="noopener">payment-system</a></h3>
-          <p class="small">Composable PoC: checkout, tokenization, fraud, settlement, reporting.</p>
-          <div class="small"><a href="assets/payment-system-repo-brief.md">Repo brief (Markdown)</a></div>
-        </div>
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/tokenization-poc" target="_blank" rel="noopener">tokenization-poc</a></h3>
-          <p class="small">FinTech tokenization patterns and mock vault integration.</p>
-        </div>
-        <div class="card">
-          <span class="badge">Repo</span>
-          <h3><a href="https://github.com/rangaprasad/agentic-ai-integration" target="_blank" rel="noopener">agentic-ai-integration</a></h3>
-          <p class="small">Experiments with planner/executor agent patterns for enterprise tasks.</p>
-        </div>
-      </div>
-      <p class="small">See all: <a href="https://github.com/rangaprasad?tab=repositories" target="_blank" rel="noopener">github.com/rangaprasad</a></p>
-    </section>
-
-    <section class="section">
-      <div class="kicker">Contact</div>
-      <p class="small">Email: <a href="mailto:ranga.rangarajan@gmail.com">ranga.rangarajan@gmail.com</a> &nbsp; | &nbsp; LinkedIn: <a href="https://linkedin.com/in/rrangaprasad" target="_blank" rel="noopener">linkedin.com/in/rrangaprasad</a></p>
-    </section>
-
-    <div class="footer">© 2025 Ranga Prasad — Static site for Cloudflare Pages • Canonical: portfolio.rangaprasad.work</div>
   </div>
 </body>
 </html>
+

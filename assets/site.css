@@ -1,45 +1,350 @@
+/* =========================================
+   Portfolio Theme — Ranga Prasad
+   Single source of truth for all pages
+   Path: /assets/site.css
+   ========================================= */
 
-/* Minimal, clean CSS for nav + utility classes */
-:root{
-  --bg:#0b0f19;
-  --fg:#e6e9f0;
-  --muted:#9aa4af;
-  --accent:#6ea8fe;
-  --pill:#131a2a;
-  --pill-border:#1f2740;
-  --card:#0f1629;
-  --link:#99c1ff;
+/* ---------- Tokens ---------- */
+:root {
+  /* Text colors */
+  --fg: #d0d3e5;     /* body text (softened) */
+  --muted: #9aa5c5;  /* meta/secondary */
+  --header: #e7e9f7; /* headings only */
+
+  /* Surfaces & accents */
+  --bg: #0b0f19;     /* background gradient start */
+  --bg2: #101426;    /* background gradient end */
+  --card: #121833;   /* card fill */
+  --card-border: #222c52; 
+  --chip-bg: #151b33;
+  --chip-border: #28345d;
+  --link: #a9b6ff;   /* links */
+  --accent: #6ea8fe; /* small accents */
+
+  /* Radii & spacing */
+  --radius: 16px;
+  --pad: 18px;
+
+  /* Shadows */
+  --shadow: 0 8px 32px rgba(20,35,85,.28);
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
 
-.nav-wrap{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(1.2) blur(6px);background:rgba(11,15,25,0.7);border-bottom:1px solid var(--pill-border)}
-.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 16px;flex-wrap:wrap}
-.brand{font-weight:700;letter-spacing:.3px;margin-right:auto}
-.pills{display:flex;gap:8px;flex-wrap:wrap}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--pill-border);border-radius:999px;background:var(--pill);font-size:14px;line-height:1}
-.pill:hover{border-color:var(--accent);box-shadow:0 0 0 2px rgba(110,168,254,0.15);text-decoration:none}
-.pill small{color:var(--muted);font-size:12px}
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
 
-.page{max-width:1100px;margin:24px auto;padding:0 16px}
-.hero{display:grid;gap:8px;margin:28px 0}
-.hero h1{font-size:28px;margin:0}
-.hero p{margin:0;color:var(--muted)}
+/* ---------- Body & Typography ---------- */
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), var(--bg2));
+  color: var(--fg);
+  line-height: 1.7;         /* easier reading */
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-.section{background:var(--card);border:1px solid var(--pill-border);border-radius:16px;padding:16px;margin:16px 0}
-.section h2{font-size:18px;margin:0 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+h1, h2, h3, h4 {
+  color: var(--header);
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
 
-.card{background:var(--pill);border:1px solid var(--pill-border);border-radius:14px;padding:12px}
-.card h3{margin:0 0 6px;font-size:16px}
-.meta{color:var(--muted);font-size:13px}
+p, .lede, .block {
+  color: var(--fg);
+  font-weight: 500;         /* avoids looking washed out on dark bg */
+  margin: 0 0 10px;
+}
 
-.btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--pill-border);background:var(--pill);}
-.btn:hover{border-color:var(--accent);text-decoration:none}
-.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:999px;border:1px solid var(--pill-border);background:var(--card);font-size:12px;color:var(--muted)}
-.list{margin:8px 0 0 16px}
-footer{opacity:.8;margin:32px 0 24px;font-size:13px;text-align:center;color:var(--muted)}
-hr{border:none;border-top:1px solid var(--pill-border);margin:16px 0}
+.meta, .chip, small { color: var(--muted); }
+
+/* ---------- Links ---------- */
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color .15s ease, opacity .15s ease, box-shadow .15s ease;
+}
+a:hover { color: #bfc9ff; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------- Layout ---------- */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 72px; }
+header .bar { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; color: var(--link); }
+
+/* Reusable grids (repos, demos, work pages) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin: 22px 0;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #2b3d7a; }
+.card h3 { margin: 0 0 6px; }
+
+/* ---------- Chips / tags ---------- */
+.chip {
+  display: inline-block;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin: 6px 6px 0 0;
+  font-size: 12px;
+}
+
+/* ---------- CTA buttons ---------- */
+.cta a {
+  display: inline-block;
+  border: 1px solid var(--chip-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-right: 8px;
+  font-size: 13px;
+  color: var(--link);
+}
+.cta a:hover { background: var(--chip-bg); }
+
+/* ---------- Utility blocks for battlecards ---------- */
+.block { margin: 8px 0; }
+.block strong { color: #e0e5ff; }
+
+/* ---------- Hub-specific small bits (optional) ---------- */
+.tag {
+  display: inline-flex; gap: 8px; align-items: center;
+  padding: 6px 10px; border: 1px solid #243056; border-radius: 999px;
+  color: #b7c3ea; background: #0f1730; font-size: 13px;
+}
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #101426; border: 1px solid #263055; border-bottom-width: 2px;
+  border-radius: 6px; padding: 1px 6px; font-size: 12px; color: #9db0ff;
+}
+
+/* ---------- Accessibility / motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .card:hover { transform: none; box-shadow: none; }
+}
+
+/* ---------- Optional: Light mode (auto) ----------
+   Uncomment if you want a light appearance when the OS is light.
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f9ff;
+    --bg2: #eef2ff;
+    --card: #ffffff;
+    --card-border: #d9e1ff;
+    --fg: #1b2335;
+    --muted: #5b6785;
+    --header: #0f1222;
+    --link: #2b55ff;
+    --chip-bg: #f2f5ff;
+    --chip-border: #dbe3ff;
+  }
+  body { background: linear-gradient(180deg, var(--bg), var(--bg2)); }
+  .card:hover { border-color: #b9c4ff; box-shadow: 0 6px 20px rgba(35,48,120,.14); }
+}
+*/
+
+/* === Muted / Washed Tone (scoped) === */
+.tone-washed h1, 
+.tone-washed h2, 
+.tone-washed h3 {
+  /* slightly softer headings */
+  color: color-mix(in srgb, var(--header) 86%, transparent);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.tone-washed .lede,
+.tone-washed p,
+.tone-washed li {
+  /* body copy softened + lighter weight */
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+  font-weight: 400;
+}
+
+.tone-washed .meta,
+.tone-washed small,
+.tone-washed .chip {
+  color: color-mix(in srgb, var(--muted) 78%, transparent);
+}
+
+.tone-washed a {
+  /* links less punchy */
+  color: color-mix(in srgb, var(--link) 88%, transparent);
+}
+
+/* Fallback for older browsers without color-mix */
+@supports not (color: color-mix(in srgb, white, transparent)) {
+  .tone-washed h1,
+  .tone-washed h2,
+  .tone-washed h3 { color: rgba(231,233,247,0.86); font-weight: 600; }
+  .tone-washed .lede,
+  .tone-washed p,
+  .tone-washed li { color: rgba(208,211,229,0.82); font-weight: 400; }
+  .tone-washed .meta,
+  .tone-washed small,
+  .tone-washed .chip { color: rgba(154,165,197,0.78); }
+  .tone-washed a { color: rgba(169,182,255,0.88); }
+}
+/* Wash only the first two direct children inside .grid */
+.grid > *:nth-child(-n+2) :is(h1,h2,h3) {
+  color: color-mix(in srgb, var(--header) 86%, transparent);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.grid > *:nth-child(-n+2) :is(p,li,.lede) {
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+  font-weight: 400;
+}
+.grid > *:nth-child(-n+2) :is(.meta,small,.chip) {
+  color: color-mix(in srgb, var(--muted) 78%, transparent);
+}
+.grid > *:nth-child(-n+2) a {
+  color: color-mix(in srgb, var(--link) 88%, transparent);
+}
+
+/* Fallback if color-mix unsupported */
+@supports not (color: color-mix(in srgb, white, transparent)) {
+  .grid > *:nth-child(-n+2) :is(h1,h2,h3){ color: rgba(231,233,247,.86); }
+  .grid > *:nth-child(-n+2) :is(p,li,.lede){ color: rgba(208,211,229,.82); }
+  .grid > *:nth-child(-n+2) :is(.meta,small,.chip){ color: rgba(154,165,197,.78); }
+  .grid > *:nth-child(-n+2) a{ color: rgba(169,182,255,.88); }
+}
+
+/* === CANONICAL WASH STYLES vFinal (2025-09-06) === */
+
+/* Grid tidy + cards */
+.grid { align-items: stretch; }
+.grid .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+/* Lists and link blocks in cards */
+.card ul { list-style: disc outside; margin: 0; padding-left: 1.1rem; }
+.card li { margin: 6px 0; }
+.card .links a { display: block; margin: 6px 0; }
+
+/* "See also" strip */
+.strip {
+  margin-top: 24px;
+  padding: 14px 18px;
+  background: rgba(18, 24, 51, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.strip h4 { margin: 0 8px 0 0; font-size: 14px; color: #c7d2ff; font-weight: 600; }
+.strip a { margin-right: 12px; }
+
+/* Header wash — bulletproof (covers nested spans/strong) */
+.wrap > header.tone-washed h1,
+.wrap > header.tone-washed h1 *,
+.wrap > header.tone-washed h2,
+.wrap > header.tone-washed h3{
+  color: color-mix(in srgb, var(--header) 86%, transparent) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.005em !important;
+}
+.wrap > header.tone-washed .lede,
+.wrap > header.tone-washed .lede *,
+.wrap > header.tone-washed p,
+.wrap > header.tone-washed p *,
+.wrap > header.tone-washed li{
+  color: color-mix(in srgb, var(--fg) 82%, transparent) !important;
+  font-weight: 400 !important;
+}
+.wrap > header.tone-washed .meta,
+.wrap > header.tone-washed .meta *,
+.wrap > header.tone-washed small,
+.wrap > header.tone-washed .chip{
+  color: color-mix(in srgb, var(--muted) 78%, transparent) !important;
+}
+.wrap > header.tone-washed a{
+  color: color-mix(in srgb, var(--link) 88%, transparent) !important;
+}
+
+/* Wash-only-on-first-two (opt-in) */
+.grid.wash-first-2 > *:nth-child(-n+2) :is(h1,h2,h3){
+  color: color-mix(in srgb, var(--header) 86%, transparent);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.grid.wash-first-2 > *:nth-child(-n+2) :is(p,li,.lede){
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+  font-weight: 400;
+}
+.grid.wash-first-2 > *:nth-child(-n+2) :is(.meta,small,.chip){
+  color: color-mix(in srgb, var(--muted) 78%, transparent);
+}
+.grid.wash-first-2 > *:nth-child(-n+2) a{
+  color: color-mix(in srgb, var(--link) 88%, transparent);
+}
+
+/* Wash-all (opt-in) */
+.grid.wash-all > * :is(h1,h2,h3){
+  color: color-mix(in srgb, var(--header) 86%, transparent);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.grid.wash-all > * :is(p,li,.lede){
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+}
+.grid.wash-all > * :is(.meta,small,.chip){
+  color: color-mix(in srgb, var(--muted) 78%, transparent);
+}
+.grid.wash-all > * a{
+  color: color-mix(in srgb, var(--link) 88%, transparent);
+}
+
+/* Fallbacks when color-mix unsupported */
+@supports not (color: color-mix(in srgb, white, transparent)) {
+  .wrap > header.tone-washed h1,
+  .wrap > header.tone-washed h1 *,
+  .wrap > header.tone-washed h2,
+  .wrap > header.tone-washed h3 { color: rgba(231,233,247,.86) !important; }
+  .wrap > header.tone-washed .lede,
+  .wrap > header.tone-washed .lede *,
+  .wrap > header.tone-washed p,
+  .wrap > header.tone-washed p *,
+  .wrap > header.tone-washed li { color: rgba(208,211,229,.82) !important; }
+  .wrap > header.tone-washed .meta,
+  .wrap > header.tone-washed .meta *,
+  .wrap > header.tone-washed small,
+  .wrap > header.tone-washed .chip { color: rgba(154,165,197,.78) !important; }
+  .wrap > header.tone-washed a { color: rgba(153,171,255,.88) !important; }
+
+  .grid.wash-first-2 > *:nth-child(-n+2) :is(h1,h2,h3),
+  .grid.wash-all > * :is(h1,h2,h3){ color: rgba(231,233,247,.86) }
+  .grid.wash-first-2 > *:nth-child(-n+2) :is(p,li,.lede),
+  .grid.wash-all > * :is(p,li,.lede){ color: rgba(208,211,229,.82) }
+  .grid.wash-first-2 > *:nth-child(-n+2) :is(.meta,small,.chip),
+  .grid.wash-all > * :is(.meta,small,.chip){ color: rgba(154,165,197,.78) }
+  .grid.wash-first-2 > *:nth-child(-n+2) a,
+  .grid.wash-all > * a{ color: rgba(153,171,255,.88) }
+}
