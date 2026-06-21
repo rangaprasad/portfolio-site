@@ -3,96 +3,172 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Code Repos – Ranga Prasad</title>
+  <title>Code Repos — Ranga Prasad</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
   <div class="wrap">
     <header class="tone-washed">
       <a href="/">← Back to Portfolio Hub</a>
       <h1>Code Repos</h1>
-      <p class="lede">Hands-on systems. Originals and strategic forks that show how I build, integrate, and operate AI platforms and FinTech systems.</p>
+      <p class="lede">
+        Public repositories across AI/agentic systems, GenAI platforms, prediction markets, and search.
+        Most active work is on <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">github.com/rangaprasad</a>.
+        CWE and AINE platform code lives in private GitLab.
+      </p>
       <div class="bar">
-        <a href="/assets/RangaPrasad-Sep%2025.pdf" target="_blank" rel="noopener">Resume (PDF)</a> ·
+        <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">GitHub Profile</a> ·
+        <a href="/assets/RangaPrasad-Jun26.pdf" target="_blank" rel="noopener">Resume (PDF)</a> ·
         <a href="mailto:ranga.rangarajan@gmail.com">Contact</a>
       </div>
     </header>
 
-    <section class="grid engg wash-all" aria-label="Repos">
-      <div class="card">
-        <h3>Top originals</h3>
-        <ul>
-          <li>
-            <strong>Face-Recognition-From-Crowd</strong> — classroom/attendance pipeline (EdTech CV/ML).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-            </div>
-          </li>
-          <li>
-            <strong>spanda-edge-ai</strong> — curated edge-AI sample apps across verticals (AI Core · systems thinking).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-            </div>
-          </li>
-          <li>
-            <strong>question-paper-analysis</strong> — question-paper parsing/QA (EdTech · RAG/IE).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-            </div>
-          </li>
-          <li>
-            <strong>next-multimodal-search-demo</strong> — Weaviate multimodal vector/RAG demo.
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-        <a href="/demos/offline.html" target="_blank" rel="noopener">Live</a>
-      </div>
-          </li>
-          <li>
-            <strong>3CC-Visualization</strong> — visualization utilities (AI Core · Data Viz).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-              <!-- If you publish GH Pages for this repo, uncomment the next line and point to it -->
-              <!-- <a href="https://rangaprasad.github.io/3CC-Visualization/" target="_blank" rel="noopener">Live</a> -->
-            </div>
-          </li>
-          <li>
-            <strong>ramco</strong> — domain/POC notebooks (Manufacturing / Supply Chain).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-            </div>
-          </li>
-          <li>
-            <strong>generative-ai-one-day-workshop</strong> — training assets (Consulting / Training).
-            <div class="links">
-              <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">Open repo</a>
-            </div>
-          </li>
-          <!-- intentionally removed: spandaai-docs (previous company org) -->
-        </ul>
-      </div>
+    <section class="grid engg wash-first-2" aria-label="Repos">
 
       <div class="card">
-        <h3>Toolchain forks (active)</h3>
-        <p class="meta">Shows breadth of the stack I integrate/operate.</p>
+        <h3>AI / Agentic</h3>
         <ul>
-          <li>Verba (Weaviate RAG app), vLLM (serving), LangChain, Ollama</li>
-          <li>MegaParse (doc parsing), promptfoo (eval), Superset (analytics), Rath (EDA)</li>
-          <li>PIKE-RAG, ms-swift, unsloth</li>
-          <li>Infra mirrors: Kafka, Redis, ZooKeeper, MySQL, dockprom</li>
+          <li>
+            <strong>watsonx-learning-platform</strong> — GenAI interactive coding labs on IBM Cloud
+            <div class="links">
+              <a href="https://github.com/rangaprasad/watsonx-learning-platform" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>agentic-ai-integration</strong> — Agentic AI integration patterns
+            <div class="links">
+              <a href="https://github.com/rangaprasad/agentic-ai-integration" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>pop-poc</strong> — Platform of Platforms POC
+            <div class="links">
+              <a href="https://github.com/rangaprasad/pop-poc" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
         </ul>
-      </div>
-
-      <div class="card">
-        <h3>Quick links</h3>
-        <div class="links">
-          <a href="https://github.com/rangaprasad" target="_blank" rel="noopener">GitHub: rangaprasad</a>
-          <a href="/demos">Live Demos</a>
-          <a href="/engg">Engineering + Platform</a>
+        <div>
+          <span class="chip">IBM watsonx</span><span class="chip">MCP</span><span class="chip">FastAPI</span>
         </div>
       </div>
+
+      <div class="card">
+        <h3>Prediction Markets / Causal AI</h3>
+        <ul>
+          <li>
+            <strong>war-wall-causality</strong> — WAR Machine: geopolitical prediction markets, LMSR + Pearl causality
+            <div class="links">
+              <a href="https://github.com/rangaprasad/war-wall-causality" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>Derrick-Equipment-Optimization-POC-V2</strong> — Industrial equipment optimisation POC
+            <div class="links">
+              <a href="https://github.com/rangaprasad/Derrick-Equipment-Optimization-POC-V2" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>tn-forecast-poc</strong> — Tamil Nadu demand forecasting (PageRank + Markov causal)
+            <div class="links">
+              <a href="https://github.com/rangaprasad/tn-forecast-poc" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <span class="chip">LMSR</span><span class="chip">Causal AI</span><span class="chip">IBM Code Engine</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Search / RAG / Multimodal</h3>
+        <ul>
+          <li>
+            <strong>parts-search</strong> — Multimodal vector/RAG parts search POC
+            <div class="links">
+              <a href="https://github.com/rangaprasad/parts-search" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>parts-ui-mock</strong> — UI mock for parts search
+            <div class="links">
+              <a href="https://github.com/rangaprasad/parts-ui-mock" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>jewel-gen-fuse-demo</strong> — Jewellery GenAI search and fuse pipeline
+            <div class="links">
+              <a href="https://github.com/rangaprasad/jewel-gen-fuse-demo" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <span class="chip">Weaviate</span><span class="chip">LangChain</span><span class="chip">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>EdTech / Learning</h3>
+        <ul>
+          <li>
+            <strong>SOTF</strong> — School of the Future: AI lesson-planning platform
+            <div class="links">
+              <a href="https://github.com/rangaprasad/SOTF" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>sotf-tutor-planner</strong> — Tutor planner module for School of the Future
+            <div class="links">
+              <a href="https://github.com/rangaprasad/sotf-tutor-planner" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <span class="chip">GenAI</span><span class="chip">EdTech</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Tools &amp; Utilities</h3>
+        <ul>
+          <li>
+            <strong>repomix</strong> (fork) — Pack entire repos into AI-friendly single files
+            <div class="links">
+              <a href="https://github.com/rangaprasad/repomix" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>onefilellm</strong> (fork) — Fetch GitHub repos, papers, YouTube transcripts for LLMs
+            <div class="links">
+              <a href="https://github.com/rangaprasad/onefilellm" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+          <li>
+            <strong>A-Curated-List-of-ML-System-Design-Case-Studies</strong> (fork) — 300+ ML system design cases
+            <div class="links">
+              <a href="https://github.com/rangaprasad/A-Curated-List-of-ML-System-Design-Case-Studies" target="_blank" rel="noopener">GitHub →</a>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <span class="chip">OSS</span><span class="chip">LLM Tools</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Private / GitLab</h3>
+        <ul>
+          <li><strong>Commusoft Workflow Engine</strong> — MCP server + Temporal monorepo (gitlab.commusoft.net)</li>
+          <li><strong>AINE Co-Sell Navigator</strong> — IBM co-sell sales tool (internal)</li>
+          <li><strong>AINE Platform</strong> — 42-solution AI SaaS (STAR Systems internal)</li>
+          <li><strong>AF8 Navigator</strong> — Art Fundamentals course platform (Netlify + Firebase)</li>
+        </ul>
+        <div>
+          <span class="chip">Private</span><span class="chip">Enterprise</span>
+        </div>
+      </div>
+
     </section>
   </div>
 </body>
 </html>
-

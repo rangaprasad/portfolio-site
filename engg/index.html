@@ -3,69 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engineering + Platform - Ranga Prasad</title>
+  <title>Engineering + Platform — Ranga Prasad</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
   <div class="wrap">
-    <header  class="tone-washed">
+    <header class="tone-washed">
       <a href="/">← Back to Portfolio Hub</a>
       <h1>Engineering + Platform</h1>
       <p class="lede">
-        <strong>Replatforming and reliability at scale.</strong>
-        I specialize in replatforming large-scale monoliths into resilient, cloud-native microservice ecosystems. At Pine Labs, I led the re-architecture of a legacy online payments stack into a reactive microservices platform on AWS/GCP, scaling throughput by 25× and hardening availability through SLO-driven engineering. My leadership has spanned engineering organizations of 150+ engineers, instituting modern DevOps/SRE practices, observability, and operational excellence. I excel at building pragmatic architectures that balance innovation with integration to legacy systems, delivering business value on time and at scale.
+        <strong>Replatforming, reliability, and agentic systems at scale.</strong>
+        I've led engineering organizations of 150+ across cloud-native transformations, SRE maturity,
+        and — most recently — production AI/agentic platform builds. At Pine Labs I re-architected a
+        legacy payments stack into reactive microservices on AWS/GCP, scaling throughput 25×. Today
+        at STAR Systems and Commusoft I architect the infrastructure that runs AI-Native Enterprises
+        and production workflow automation.
       </p>
       <div class="bar">
-        <a href="/assets/RangaPrasad-Sep%2025.pdf" target="_blank" rel="noopener">Resume (PDF)</a> ·
+        <a href="/assets/RangaPrasad-Jun26.pdf" target="_blank" rel="noopener">Resume (PDF)</a> ·
+        <a href="https://www.linkedin.com/in/rrangaprasad/" target="_blank" rel="noopener">LinkedIn</a> ·
         <a href="mailto:ranga.rangarajan@gmail.com">Contact</a>
       </div>
     </header>
 
-    <!-- Note: 'engg' class activates the layout fixes; 'wash-first-2' mutes first two columns only -->
-    <section class="grid cards wash-first-2 engg" aria-label="Role tracks">
+    <section class="grid engg wash-first-2" aria-label="Engineering">
+
+      <div class="card">
+        <h3>Current — AI/Agentic Infrastructure</h3>
+        <ul>
+          <li>Commusoft Workflow Engine (CWE): Python/FastAPI MCP server, TypeScript Temporal monorepo, Angular 17 canvas — live on Linode</li>
+          <li>AINE platform infra: L1 compute layer across IBM Cloud, Linode, and IBM Code Engine</li>
+          <li>MCP server design: action registry, domain anchor pre-pass, role-scoped routing</li>
+          <li>Temporal durable workflows: retry caps, activity design, HumanHandover with SendGrid</li>
+          <li>Six-layer test framework — 91%+ pass rate across autoplay suites</li>
+        </ul>
+        <div>
+          <span class="chip">MCP</span><span class="chip">Temporal</span>
+          <span class="chip">FastAPI</span><span class="chip">Angular 17</span>
+          <span class="chip">IBM Code Engine</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Prior — Cloud-Native Platform (Pine Labs)</h3>
+        <ul>
+          <li>Re-architected legacy online payments stack → reactive microservices on AWS/GCP</li>
+          <li>25× throughput scaling; P99 latency down 60% via query shaping and async pipelines</li>
+          <li>SLO dashboards and error budgets → MTTR down 40%</li>
+          <li>Led engineering org of 150+ engineers; instituted DevOps/SRE practices</li>
+          <li>Blue/green deployments, HPA autoscaling, chaos testing, paved-road platform</li>
+        </ul>
+        <div>
+          <span class="chip">Kubernetes</span><span class="chip">Kafka</span>
+          <span class="chip">AWS/GCP</span><span class="chip">SRE</span><span class="chip">CI/CD</span>
+        </div>
+      </div>
+
       <div class="card">
         <h3>What I lead</h3>
         <ul>
+          <li>Agentic platform architecture: MCP, Temporal, multi-agent coordination</li>
           <li>Replatforming: monolith → microservices, strangler patterns, service boundaries</li>
           <li>Cloud-native: Kubernetes, Terraform, GitHub Actions, progressive delivery</li>
           <li>Streaming &amp; data integrity: Kafka, exactly-once, idempotency, retries/DLQs</li>
-          <li>Performance &amp; scale: 25× throughput, latency budgets, autoscaling, caching</li>
           <li>Reliability: SRE practices, incident drills, error budgets, chaos testing</li>
           <li>Org design: hiring loops, ladders, operating cadence, delivery rituals</li>
         </ul>
-        <div>
-          <span class="chip">Kubernetes</span>
-          <span class="chip">Kafka</span>
-          <span class="chip">AWS/GCP</span>
-          <span class="chip">CI/CD</span>
-          <span class="chip">SRE</span>
-        </div>
       </div>
 
       <div class="card">
         <h3>Representative wins</h3>
         <ul>
-          <li>Legacy stack re-arch → microservices with blue/green and HPA</li>
-          <li>P99 latency reduced by 60% via query shaping, async pipelines, caches</li>
-          <li>SLO dashboards and error budgets → MTTR down 40%</li>
-          <li>Paved-road platform enabled dozens of teams to self-serve safely</li>
+          <li>CWE v3.0 — production agentic engine; 7/7 autoplay tests passing against live Commusoft Stage</li>
+          <li>AINE L1 substrate audit — 30 groundable actions identified across 1,200+ CS API endpoints</li>
+          <li>IBM Code Engine deployments — WAR Machine, watsonx Learning Platform, StintLabs, Sangli</li>
+          <li>Pine Labs — 25× throughput, 60% P99 latency reduction, 40% MTTR improvement</li>
+          <li>GNN-based code call-graph CLI — OSS/Ollama-only, open source</li>
         </ul>
       </div>
 
       <div class="card">
         <h3>Quick links</h3>
         <div class="links">
-          <a href="/portfolio_site_pdf_only/">Work &amp; Case Studies</a>
-          <a href="/product">Product + Innovation</a>
-          <a href="/fintech-gtm">FinTech + Payments</a>
-          <a href="/edtech-engg">AI Platforms + Scale-ups</a>
+          <a href="/edtech-engg">AI-Native Enterprise (AINE)</a>
           <a href="/demos">Live Demos</a>
           <a href="/repos">Code Repos</a>
+          <a href="/fintech-gtm">FinTech + Payments</a>
+          <a href="/consulting">Consulting + Advisory</a>
         </div>
       </div>
+
     </section>
   </div>
 </body>
 </html>
-
