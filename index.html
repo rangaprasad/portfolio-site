@@ -3,31 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech</title>
-  <meta name="description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech" />
-  <meta property="og:description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
+  <title>Ranga Prasad — CTO-AI · AI-Native Enterprise · IBM Partner</title>
+  <meta name="description" content="CTO-AI building AI-Native Enterprise platforms. Founder of the AINE practice at STAR Systems, IBM Gold Partner. Engineering leader across AI/GenAI, FinTech, and cloud-native systems." />
+  <meta property="og:title" content="Ranga Prasad — CTO-AI · AI-Native Enterprise · IBM Partner" />
+  <meta property="og:description" content="CTO-AI building AI-Native Enterprise platforms. Founder of the AINE practice at STAR Systems, IBM Gold Partner." />
   <meta property="og:image" content="/assets/og-card.png" />
   <meta property="og:url" content="/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ranga Prasad — Engineering Leadership · AI/GenAI Platforms · FinTech" />
-  <meta name="twitter:description" content="Engineering leader building AI/GenAI platforms, cloud-native systems, FinTech/Payments, Product, and Consulting." />
+  <meta name="twitter:title" content="Ranga Prasad — CTO-AI · AI-Native Enterprise · IBM Partner" />
+  <meta name="twitter:description" content="CTO-AI building AI-Native Enterprise platforms. Founder of the AINE practice at STAR Systems, IBM Gold Partner." />
   <meta name="twitter:image" content="/assets/og-card.png" />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css" />
-
   <script>
-    // Deep-link router: only redirects when ?role=... is explicitly present.
     (function () {
       const role = (new URLSearchParams(location.search).get('role') || '').toLowerCase();
-      if (!role) return; // <- prevents any “landing in X” surprises
+      if (!role) return;
       const map = {
         engg: '/engg', engineering: '/engg', platform: '/engg',
         ai: '/edtech-engg', genai: '/edtech-engg', llm: '/edtech-engg', rag: '/edtech-engg',
+        aine: '/edtech-engg', ibm: '/consulting', star: '/consulting',
         payments: '/fintech-gtm', fintech: '/fintech-gtm',
         product: '/product', innovation: '/product',
         consulting: '/consulting', advisory: '/consulting',
@@ -44,57 +40,76 @@
       <span class="tag">Portfolio Hub</span>
       <h1>
         <span class="name">Ranga Prasad</span><br />
-        <span class="title">Engineering Leadership · AI/GenAI Platforms · FinTech/Payments · Product · Consulting</span>
+        <span class="title">CTO-AI · AI-Native Enterprise · IBM Gold Partner · Engineering Leadership</span>
       </h1>
-      <p class="lede"><strong>I lead engineering organizations and build platforms that scale.</strong> My portfolio spans
-        <em>cloud-native transformations, applied AI/ML systems, FinTech/payment architectures, product innovation, and consulting advisory</em>.
+      <p class="lede">
+        <strong>I build AI-Native Enterprises — and the platforms that power them.</strong>
+        Currently leading the <em>AINE (AI-Native Enterprise) practice at STAR Systems</em>, an IBM Gold Partner,
+        and building the <em>Commusoft Workflow Engine</em> — a production agentic automation platform.
+        My work spans applied AI systems, cloud-native architecture, FinTech, and enterprise consulting.
       </p>
       <div class="bar">
-        <a href="/assets/RangaPrasad-Sep%2025.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a href="/assets/RangaPrasad-Jun26.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <span class="sep">•</span>
+        <a href="https://www.linkedin.com/in/rrangaprasad/" target="_blank" rel="noopener">LinkedIn</a>
         <span class="sep">•</span>
         <a href="mailto:ranga.rangarajan@gmail.com">Contact</a>
       </div>
     </header>
 
-    <!-- Direct paths keep navigation simple; the deep-link router is still available for external URLs -->
+    <section class="now-strip" aria-label="Current work">
+      <h2 class="section-label">What I'm building now</h2>
+      <div class="now-grid">
+        <div class="now-card">
+          <span class="now-tag">STAR Systems · IBM Gold Partner</span>
+          <strong>AINE Platform</strong>
+          <p>42 AI solutions across 7 verticals. Entry motion: AINE Health Check (₹3–5L, 1 week). Co-sell with IBM watsonx.</p>
+        </div>
+        <div class="now-card">
+          <span class="now-tag">Commusoft · Production</span>
+          <strong>Commusoft Workflow Engine</strong>
+          <p>Agentic automation platform — MCP server, Temporal workflows, Angular canvas. Live against 1,200+ API endpoints.</p>
+        </div>
+        <div class="now-card">
+          <span class="now-tag">IBM Co-Sell</span>
+          <strong>AINE Co-Sell Navigator</strong>
+          <p>Live sales tool for IBM partnership meetings. 154 mapped IBM products, McKinsey frameworks, 15-account India portfolio.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="grid wash-all" aria-label="Role tracks">
+      <a class="card" href="/edtech-engg">
+        <h3>AI-Native Enterprise (AINE)</h3>
+        <p>5-layer AI maturity model, 42 solutions, IBM co-sell, agentic workflows, MCP architecture.</p>
+        <div><span class="chip">AINE</span><span class="chip">MCP</span><span class="chip">Temporal</span><span class="chip">IBM watsonx</span></div>
+      </a>
       <a class="card" href="/engg">
         <h3>Engineering + Platform</h3>
         <p>Replatform monolith → microservices, 25× throughput, SRE maturity, reliability, org scaling.</p>
         <div><span class="chip">Kubernetes</span><span class="chip">Kafka</span><span class="chip">AWS/GCP</span></div>
       </a>
-
-      <a class="card" href="/edtech-engg">
-        <h3>AI + Scale-ups</h3>
-        <p>LLMOps, RAG, multi-tenant inference, observability, eval harnesses.</p>
-        <div><span class="chip">RAG</span><span class="chip">LLMOps</span><span class="chip">FastAPI</span></div>
-      </a>
-
       <a class="card" href="/fintech-gtm">
         <h3>FinTech + Payments</h3>
         <p>Gateways, payouts, risk, reconciliation, settlement, analytics at scale.</p>
         <div><span class="chip">Payments</span><span class="chip">Risk</span><span class="chip">Analytics</span></div>
       </a>
-
       <a class="card" href="/product">
         <h3>Product + Innovation</h3>
         <p>0→1 delivery, MVPs, narrative demos, stakeholder alignment.</p>
         <div><span class="chip">MVPs</span><span class="chip">Strategy</span></div>
       </a>
-
       <a class="card" href="/consulting">
         <h3>Consulting + Advisory</h3>
-        <p>Fractional VP Eng roles, audits, roadmaps, leadership coaching.</p>
-        <div><span class="chip">Advisory</span><span class="chip">Roadmaps</span></div>
+        <p>AINE Health Check entry motion, AI roadmaps, IBM co-sell, fractional CTO-AI engagements.</p>
+        <div><span class="chip">AINE Health Check</span><span class="chip">IBM Partner</span></div>
       </a>
-
-      <a class="card" href="/portfolio_site_pdf_only/">
-        <h3>Work &amp; Case Studies</h3>
-        <p>Curated cases (PDFs): Problem → Solution → Stack → Outcome.</p>
-        <div><span class="chip">Case Studies</span></div>
+      <a class="card" href="/demos">
+        <h3>Live Demos</h3>
+        <p>Production systems: WAR Machine, CWE Canvas, watsonx Learning Platform, AINE Navigator.</p>
+        <div><span class="chip">Live</span><span class="chip">Case Studies</span></div>
       </a>
     </section>
   </div>
 </body>
 </html>
-

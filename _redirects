@@ -1,32 +1,29 @@
-# Hybrid redirects (preserve handcrafted pages; keep only essential shortlinks)
-/resume         /assets/RangaPrasad-Sep%2025.pdf     200
-/deck           /assets/RangaPrasad_Portfolio_Deck_Exec.pdf   200
+# Hybrid redirects
+
+/resume         /assets/RangaPrasad-Jun26.pdf                200
+/deck           /assets/RangaPrasad_Portfolio_Deck_Exec.pdf  200
+
+# Shortlinks
+/aine           /edtech-engg/                                301
+/star           /consulting/                                  301
+/ibm            /consulting/                                  301
+/cwe            /demos/                                       301
 
 # Role landers
 /roles/aws-engg     /roles/aws-engg/index.html   200
 /roles/stripe-gtm   /roles/stripe-gtm/index.html 200
 
-# Legacy work pages → unified portfolio page
+# Domain landers
+/              /index.html                          200
+/engg          /engg/                               301
+/edtech-engg   /edtech-engg/                        301
+/fintech-gtm   /fintech-gtm/                        301
+/product       /product/                            301
+/consulting    /consulting/                         301
+/demos         /demos/                              301
+/repos         /repos/                              301
+
+# Legacy redirects
 /work/*                          /portfolio_site_pdf_only/   301
 /portfolio_site_pdf_only/work/*  /portfolio_site_pdf_only/   301
-
-Old GTM landing (if someone bookmarked it) → Product track
 /gtm/*                           /product/                   301
-
-# domain landers
-/              			/index.html     	    200
-/work/*        			/portfolio_site_pdf_only/   301
-/portfolio_site_pdf_only/work/* /portfolio_site_pdf_only/   301
-/engg          			/engg/             	    301
-/edtech-engg   			/edtech-engg/               301
-/fintech-gtm   			/fintech-gtm/               301
-/product       			/product/                   301
-/consulting    			/consulting/                301
-/demos         			/demos/                     301
-/repos         			/repos/                     301
-
-# Convenience aliases
-/demos                           /demos/                     301
-/repos                           /repos/                     301
-
-

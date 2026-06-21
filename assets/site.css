@@ -348,3 +348,101 @@ header .bar { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; color
   .grid.wash-first-2 > *:nth-child(-n+2) a,
   .grid.wash-all > * a{ color: rgba(153,171,255,.88) }
 }
+
+/* =========================================
+   Nav Strip
+   ========================================= */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 15, 25, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--card-border);
+}
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  gap: 12px;
+}
+.nav .brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--header);
+  white-space: nowrap;
+}
+.nav .pills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav .pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.2;
+  transition: background .15s, color .15s;
+}
+.nav .pill span { font-weight: 600; color: var(--fg); font-size: 13px; }
+.nav .pill small { font-size: 10px; color: var(--muted); }
+.nav .pill:hover { background: var(--card); color: var(--link); }
+.nav .pill:hover span { color: var(--link); }
+
+/* =========================================
+   "What I'm building now" strip (index only)
+   ========================================= */
+.now-strip {
+  margin: 28px 0 8px;
+}
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.now-card {
+  background: rgba(18, 24, 51, 0.5);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.now-card strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--header);
+}
+.now-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+}
+.now-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Separator dot in header bar */
+.bar .sep { color: var(--muted); }
